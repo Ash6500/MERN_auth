@@ -1,11 +1,10 @@
 import mongoose from "mongoose";
-import { reset } from "nodemon";
 
 const userSchema = new mongoose.Schema({
     email:{
         type: String,
         required: true,
-        unique: true
+        unique: true,
     },
     password:{
         type: String,
@@ -13,15 +12,15 @@ const userSchema = new mongoose.Schema({
     },
     name:{
         type: String,
-        required: true
+        required: true,
     },
     lastLogin:{
         type: Date,
-        default: Date.now
+        default: Date.now,
     },
     isVerified:{
-        typre: Boolean,
-        default: false
+        type: Boolean,
+        default: false,
     },
     resetPasswordToken: String,
     resetPasswordExpiresAt: Date,
